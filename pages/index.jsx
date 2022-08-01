@@ -1,12 +1,74 @@
 import Swap from "../components/Swap";
 import ThemeShowcase from "../components/ThemeShowcase";
 import Icons from "../components/Icons";
-import Hero from "../components/Hero";
+import { HeroImage, HeroImageSide, HeroLogin } from "../components/Heroes";
+import Carousel from "../components/Carousel";
+import Stats from "../components/Stats";
+import Table from "../components/Table";
+import {
+  CardImageOverlay,
+  CardResponsive,
+  CardResponsiveAlt,
+  CardResponsiveAlt2,
+  CardSideImage,
+  CardWithBadge,
+} from "../components/Cards";
+import { Toggles } from "../components/Toggles";
+import Radios from "../components/Radios";
+import Footer from "../components/Footer";
+import {
+  MockupCode,
+  MockupCodeHighlightLine,
+  MockupCodeLongLine,
+  MockupCodeMultiline,
+  MockupPhone,
+  MockupPhonePrimary,
+  MockupWindow,
+  MockupWindow2,
+} from "../components/Mockups";
+import { FormExample } from "../components/Forms";
+import DashboardApp from "../components/Dashboard";
+import Charts from "../components/Charts";
 
 export default function Home() {
+  const weightList1 = [
+    60.0, 60.2, 59.1, 61.4, 59.9, 60.2, 59.8, 58.6, 59.6, 59.2,
+  ];
+  const weightList2 = [
+    60.0, 60.2, 59.1, 61.4, 59.9, 60.2, 59.8, 58.6, 59.6, 59.2,
+  ];
+  const weightList3 = [
+    120.0, 90.2, 89.6, 67.3, 39.2, 63.6, 99.8, 105.3, 152.1, 179.3,
+  ];
+  const weightList4 = [
+    48.0, 88.2, 15.1, 61.4, 22.9, 96.2, 95.8, 150.6, 59.6, 59.2,
+  ];
+
   return (
     <>
-      <Hero />
+      <HeroLogin />
+      <HeroImage />
+      <HeroImageSide />
+      <Carousel />
+      <Stats />
+      <Table />
+
+      <CardResponsive />
+      <div className="flex gap-2 w-3/3 mx-auto py-20 bg-base-300">
+        <CardResponsiveAlt />
+        <CardResponsiveAlt2 />
+      </div>
+
+      <div className="flex gap-2 w-3/3 mx-auto py-20 bg-base-300">
+        <FormExample />
+      </div>
+
+      <div className="grid grid-cols-4 p-40 place-items-center bg-base-300">
+        <Toggles />
+        <Toggles />
+        <Toggles />
+        <Radios />
+      </div>
 
       <div className="grid grid-cols-4 gap-2 p-4">
         <div className="bg-primary-focus text-primary-content p-4">
@@ -158,6 +220,61 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <div className="grid grid-cols-3 place-items-center gap-4 p-40 bg-primary/20 text-accent-content">
+        <CardImageOverlay />
+        <CardImageOverlay />
+        <CardImageOverlay />
+
+        <CardWithBadge />
+        <CardWithBadge />
+        <CardWithBadge />
+
+        <CardSideImage />
+        <CardSideImage />
+        <CardSideImage />
+        <Icons />
+        <Icons />
+        <Icons />
+
+        <MockupPhone />
+        <MockupPhone />
+        <MockupPhone />
+      </div>
+
+      <div className="grid grid-cols-3 place-items-center gap-4 p-40 bg-base-300">
+        <MockupPhone />
+        <MockupPhone />
+        <MockupPhone />
+        <MockupPhonePrimary />
+        <MockupPhonePrimary />
+        <MockupPhonePrimary />
+        <MockupCode />
+        <MockupCodeMultiline />
+        <MockupCodeHighlightLine />
+      </div>
+
+      <div className="container mx-auto p-20 space-y-16">
+        <MockupCodeLongLine />
+        <MockupWindow />
+        <MockupCodeLongLine />
+        <MockupWindow2 />
+        <MockupCodeLongLine />
+      </div>
+
+      {/* dasboard */}
+
+      <div className="grid grid-cols-2">
+        <DashboardApp weightList={weightList1} />
+        <DashboardApp weightList={weightList2} />
+        <DashboardApp weightList={weightList3} />
+        <DashboardApp weightList={weightList4} />
+      </div>
+
+      <Charts />
+
+      {/* footer section */}
+      <Footer />
     </>
   );
 }

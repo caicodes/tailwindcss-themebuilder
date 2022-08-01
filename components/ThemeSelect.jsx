@@ -64,7 +64,7 @@ const ThemeSelect = () => {
         </div>
         <div className="dropdown dropdown-end">
           <label
-            tabindex="0"
+            tabIndex="0"
             className="btn btn-ghost btn-circle avatar hover:bg-primary-focus/50"
           >
             <div className="w-8 p-1 flex justify-center items-center rounded-full text-primary">
@@ -73,7 +73,7 @@ const ThemeSelect = () => {
           </label>
 
           <div
-            tabindex="0"
+            tabIndex="0"
             className="mt-3 p-2 rounded-lg shadow-2xl menu dropdown-content w-96 bg-primary -top-4"
           >
             <div className="bg-primary text-primary-content pt-2 pb-4 px-4">
@@ -88,6 +88,7 @@ const ThemeSelect = () => {
             <div className="grid grid-cols-3 gap-2 bg-base-100/50 text-base-content p-4 ">
               {themes.map((daisyuiTheme, index) => (
                 <div
+                  key={index}
                   data-theme={daisyuiTheme.name}
                   className="btn text-xs"
                   onClick={() => setTheme(daisyuiTheme.name)}
