@@ -2,12 +2,6 @@ import React from "react";
 import Icons from "./Icons";
 import { Cog } from "./svg/icons/Heroicons";
 
-/**
- *
- *
- * PHONES
- *
- */
 
 // DEFAUL PHONE
 export const MockupPhone = () => {
