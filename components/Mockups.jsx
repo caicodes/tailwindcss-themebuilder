@@ -2,7 +2,6 @@ import React from "react";
 import Icons from "./Icons";
 import { Cog } from "./svg/icons/Heroicons";
 
-
 // DEFAUL PHONE
 export const MockupPhone = () => {
   return (
@@ -25,7 +24,7 @@ export const MockupPhonePrimary = () => {
         <div className="camera"></div>
         <div className="display">
           <div className="artboard artboard-demo phone-1 text-primary text-2xl space-y-4 bg-primary-focus/20">
-            <div>Let's get it on...</div>
+            <div>Lets get it on...</div>
             <Cog />
             <Icons />
           </div>
